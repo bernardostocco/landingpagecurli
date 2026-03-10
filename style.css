@@ -138,13 +138,58 @@ body {
 }
 
 /* Responsividade */
+
+
+/* --- AJUSTES DE RESPONSIVIDADE --- */
+
 @media (max-width: 768px) {
-    .wix-form-wrapper {
-        padding: 50px 20px;
-        max-width: 90%;
+    /* Ajuste do Header e Logo */
+    .main-header {
+        padding: 20px 0;
     }
-    
+    .logo-img {
+        height: 50px; /* Logo um pouco menor no celular */
+    }
+
+    /* Ajuste da Hero (Texto Principal) */
+    .hero {
+        padding: 40px 0 20px;
+    }
+    .hero h1 {
+        font-size: 2.2rem; /* Diminuído para não quebrar palavras */
+        letter-spacing: -1px;
+        padding: 0 10px;
+    }
+    .hero p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* Ajuste do Container do Formulário */
+    .wix-form-wrapper {
+        padding: 40px 15px; /* Menos espaço interno para o form caber melhor */
+        margin: 0 10px;    /* Margem externa para não colar na borda do celular */
+        border-radius: 16px;
+        width: auto;       /* Deixa o navegador calcular a largura */
+    }
+
+    .form-header h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Ajuste da Área do Placeholder */
     .placeholder-area {
-        min-height: 600px; /* Um pouco menor no celular para não cansar o scroll */
+        min-height: 500px; /* Reduzido para não exigir tanto scroll inicial */
+        padding: 10px;
+    }
+}
+
+/* Ajuste extra para celulares muito pequenos (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .badge {
+        font-size: 0.7rem;
     }
 }
